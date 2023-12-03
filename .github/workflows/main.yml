@@ -1,0 +1,24 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Build and deploy
+        run: |
+          echo "$SSH_PEM_KEY" >> $HOME/key.pem
+          chmod 400 $HOME/key.pem
+          ssh -i $HOME/key.pem -o StrictHostKeyChecking=no ${SSH_USER}@${SSH_KNOWN_HOSTS}
+          cd /var/lib/jenkins/workspace/front-end
+          ./deploy.sh
+        env:
+          SSH_USER: ${{secrets.SSH_USERNAME}}
+          SSH_KNOWN_HOSTS: ${{secrets.SSH_HOST}}
+          SSH_PEM_KEY: ${{secrets.SSH_PEM_KEY}}
