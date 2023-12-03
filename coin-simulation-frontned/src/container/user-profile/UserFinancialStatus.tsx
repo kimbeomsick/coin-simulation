@@ -14,11 +14,13 @@ const UserFinancialStatus: React.FC = () => {
           justifyContent: "space-between",
           alignItems: "center",
           borderRadius: theme.border.default,
-          boxShadow: theme.shadow.default,
+          boxShadow: theme.shadowbox.default,
           height: theme.box.height,
           backgroundColor: "#fff",
         }}
-      >fdzz</Box>
+      >
+        fdzz
+      </Box>
     </>
   );
 };

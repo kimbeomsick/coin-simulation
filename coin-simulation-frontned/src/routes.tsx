@@ -18,14 +18,19 @@ export const router = createBrowserRouter([
         path: "trade",
         element: <Trade />,
       },
+      {
+        path: "test",
+        element: <Test />,
+      },
     ],
   },
   {
-    path: "login",
-    element: <Login />,
-  },
-  {
-    path: "test",
-    element: <Test />,
+    path: "auth",
+    children: [
+      {
+        path: "kakao",
+        element: <Login />,
+      },
+    ],
   },
 ]);

@@ -14,11 +14,18 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.12",
     "@mui/material": "^5.14.12",
+    "@types/rsocket-core": "^0.0.9",
+    "@types/rsocket-tcp-client": "^0.0.3",
+    "@types/rsocket-tcp-server": "^0.0.5",
+    "@types/rsocket-websocket-client": "^0.0.6",
+    "@types/ws": "^8.5.8",
     "axios": "^1.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
     "recoil": "^0.7.7",
+    "rsocket-core": "^0.0.27",
+    "rsocket-tcp-client": "^0.0.25",
     "styled-components": "^6.0.8"
   },
   "devDependencies": {
